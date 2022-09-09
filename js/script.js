@@ -13,7 +13,7 @@ function preencherContadores() {
     // personagensContador.innerHTML = swipiGet("people/").count
 
 
-    Promise.all([swipiGet("people/"),
+        Promise.all([swipiGet("people/"),
             swipiGet("vehicles/"),
             swipiGet("planets/"),
             swipiGet("starships/"),
@@ -28,6 +28,8 @@ function preencherContadores() {
             starShipsContador.innerHTML = results[3].data.count
             console.log(results[4].data)
                 // Funcoes
+
+                
             function procurarPlaneta(PL) {
                 var home = PL.homeworld.charAt(30)
                 const buscarPL = results[2].data.results[home]
